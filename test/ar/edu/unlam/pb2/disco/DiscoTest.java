@@ -54,4 +54,29 @@ public class DiscoTest {
 		Assert.assertEquals(superficieEsperada, superficieObtenida);
 	}
 	
+	@Test
+	public void probandoCambioRadioInterior() {
+		Double radioInterno = 2.0;
+		Double radioExterno = 4.0;
+		Double nuevoRadioInterno = 3.0;
+			
+		Disco nuevoDisco = new Disco(radioInterno, radioExterno);
+			
+		Assert.assertTrue(nuevoDisco.cambiarRadioInterior(nuevoRadioInterno));
+		Assert.assertEquals(nuevoRadioInterno, nuevoDisco.getRadioInterior());
+	}
+	
+	@Test
+	public void probandoCambioRadioExterior() {
+		Double radioInterno = 2.0;
+		Double radioExterno = 4.0;
+		Double nuevoRadioExterno = 6.0;
+			
+		Disco nuevoDisco = new Disco(radioInterno, radioExterno);
+			
+		Assert.assertTrue(nuevoDisco.cambiarRadioInterior(nuevoRadioExterno));
+		Assert.assertEquals(nuevoRadioExterno, nuevoDisco.getRadioExterior());
+	}
 }
+	
+
